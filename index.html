@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GiGNear – Datenschutzerklärung / Privacy Policy</title>
+  <meta name="description" content="GiGNear Datenschutzerklärung – Privacy Policy in Deutsch, English, Français, Español, Italiano">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph für App Store Connect Link-Vorschau -->
+  <meta property="og:title" content="GiGNear Privacy Policy">
+  <meta property="og:description" content="Privacy Policy for the GiGNear iOS app">
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --amber:   #F5A623;
+      --navy:    #0D0F1A;
+      --surface: #151827;
+      --border:  #252A3F;
+      --chalk:   #EEF0F8;
+      --muted:   #6B7299;
+      --green:   #3DD68C;
+      --red:     #E8445A;
+      --purple:  #A855F7;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Helvetica Neue", Arial, sans-serif;
+      background: var(--navy);
+      color: var(--chalk);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: var(--chalk);
+    }
+    .logo span { color: var(--amber); }
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ── Lang switcher ── */
+    .lang-bar {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      padding: 16px 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 14px;
+      transition: all .15s;
+    }
+    .lang-btn.active,
+    .lang-btn:hover {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: #000;
+    }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── Language sections ── */
+    .lang-section { display: none; }
+    .lang-section.visible { display: block; }
+
+    /* ── Typography ── */
+    h1 {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--chalk);
+      letter-spacing: -0.5px;
+      margin: 40px 0 12px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--amber);
+    }
+    h1:first-child { margin-top: 0; }
+
+    h2 {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--chalk);
+      margin: 28px 0 10px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+    li {
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    strong { color: var(--chalk); }
+    a { color: var(--amber); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Info boxes ── */
+    .tip {
+      border-left: 4px solid var(--amber);
+      background: rgba(245,166,35,.07);
+      border-radius: 0 10px 10px 0;
+      padding: 12px 16px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--chalk);
+    }
+    .tip.green { border-color: var(--green); background: rgba(61,214,140,.07); }
+    .tip.red   { border-color: var(--red);   background: rgba(232,68,90,.07); }
+
+    /* ── Tables ── */
+    .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 12px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      min-width: 500px;
+    }
+    thead tr { background: var(--surface); }
+    thead th {
+      padding: 10px 14px;
+      text-align: left;
+      color: var(--amber);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:nth-child(even) { background: rgba(255,255,255,.02); }
+    tbody td {
+      padding: 10px 14px;
+      color: var(--muted);
+      vertical-align: top;
+    }
+    tbody td strong { color: var(--chalk); }
+    tbody td:first-child { color: var(--chalk); font-weight: 600; }
+
+    /* ── Privacy hero ── */
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      margin-bottom: 32px;
+    }
+    .hero-icon { font-size: 56px; margin-bottom: 16px; }
+    .hero h1 {
+      border: none;
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+    .hero p { font-size: 15px; max-width: 480px; margin: 0 auto; }
+    .meta {
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--border);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer a { color: var(--amber); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      h1 { font-size: 22px; }
+      h2 { font-size: 17px; }
+      main { padding: 24px 16px 60px; }
+      header { padding: 14px 16px; }
+      .lang-bar { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo">GiG<span>Near</span></div>
+    <div class="badge">Privacy Policy</div>
+  </div>
+  <a href="mailto:GIGNear@pm.me" style="color:var(--muted);font-size:13px;">GIGNear@pm.me</a>
+</header>
+
+<!-- Language switcher -->
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="switchLang('de')">🇩🇪 Deutsch</button>
+  <button class="lang-btn" onclick="switchLang('en')">🇬🇧 English</button>
+  <button class="lang-btn" onclick="switchLang('fr')">🇫🇷 Français</button>
+  <button class="lang-btn" onclick="switchLang('es')">🇪🇸 Español</button>
+  <button class="lang-btn" onclick="switchLang('it')">🇮🇹 Italiano</button>
+</div>
+
+<main>
+
+<!-- ════════════════════════════════════════════════════════════
+     DEUTSCH
+════════════════════════════════════════════════════════════ -->
+<section class="lang-section visible" id="lang-de">
+
+  <div class="hero">
+    <div class="hero-icon">🔒</div>
+    <h1>Datenschutzerklärung</h1>
+    <p>GiGNear liest nur Artist-Namen – keine Musikbibliothek, kein Hörverlauf, keine persönlichen Daten.</p>
+    <div class="meta">Version 1.0 · Juni 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
+  </div>
+
+  <h1>1. Verantwortlicher</h1>
+  <p>Verantwortlicher im Sinne der DSGVO ist <strong>GiGNear</strong>.<br>
+  Kontakt: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></p>
+
+  <h1>2. Welche Daten wir verarbeiten</h1>
+  <div class="tip green">✅ GiGNear liest KEINE Musikbibliothek, KEINEN Hörverlauf, KEINE persönlichen Nachrichten und KEINE Kontakte.</div>
+
+  <div class="table-wrap"><table>
+    <thead><tr>
+      <th>Datenkategorie</th><th>Quelle</th><th>Zweck</th><th>Speicherung</th><th>Weitergabe</th>
+    </tr></thead>
+    <tbody>
+      <tr><td>Artist-Namen</td><td>Verbundene Musik-Dienste</td><td>Event-Suche</td><td>Nur RAM, nicht persistiert</td><td>Ticketmaster, Bandsintown</td></tr>
+      <tr><td>GPS-Standort</td><td>iOS CoreLocation</td><td>Events in der Nähe</td><td>Nicht gespeichert</td><td>Koordinaten (gerundet) an Event-APIs</td></tr>
+      <tr><td>OAuth Access Token</td><td>Musik-Dienste</td><td>Playlist-Zugriff</td><td>iOS Keychain (verschlüsselt)</td><td>Nur an jeweiligen Dienst</td></tr>
+      <tr><td>Gerätekennungen (IDFA)</td><td>iOS</td><td>Werbung (optional)</td><td>Google-Server</td><td>Google AdMob (nur mit Einwilligung)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h1>3. Musik-Dienste (OAuth)</h1>
+  <p>Du kannst folgende Dienste verbinden. Die Verbindung ist freiwillig und jederzeit widerrufbar. Wir lesen ausschließlich <strong>Artist-Namen</strong>.</p>
+
+  <div class="table-wrap"><table>
+    <thead><tr><th>Dienst</th><th>Welche Daten</th><th>Datenschutz des Anbieters</th></tr></thead>
+    <tbody>
+      <tr><td>Spotify</td><td>Playlist-Namen, Artist-Namen</td><td><a href="https://spotify.com/privacy" target="_blank">spotify.com/privacy</a></td></tr>
+      <tr><td>Apple Music</td><td>Playlist-Namen, Artist-Namen</td><td><a href="https://apple.com/de/privacy" target="_blank">apple.com/de/privacy</a></td></tr>
+      <tr><td>YouTube Music</td><td>Playlist-Namen, Artist-Namen</td><td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td></tr>
+      <tr><td>SoundCloud</td><td>Set-Namen, Artist-Namen</td><td><a href="https://soundcloud.com/pages/privacy" target="_blank">soundcloud.com/pages/privacy</a></td></tr>
+      <tr><td>Qobuz</td><td>Playlist-Namen, Artist-Namen</td><td><a href="https://www.qobuz.com/de-de/info/legal/privacy-policy" target="_blank">qobuz.com/…/privacy-policy</a></td></tr>
+      <tr><td>Deezer</td><td>Playlist-Namen, Artist-Namen</td><td><a href="https://www.deezer.com/legal/privacy" target="_blank">deezer.com/legal/privacy</a></td></tr>
+      <tr><td>Tidal</td><td>Playlist-Namen, Artist-Namen</td><td><a href="https://tidal.com/privacy" target="_blank">tidal.com/privacy</a></td></tr>
+      <tr><td>Amazon Music</td><td colspan="2">Nicht verfügbar – kein öffentliches API</td></tr>
+    </tbody>
+  </table></div>
+
+  <h1>4. Standortdaten</h1>
+  <ul>
+    <li>Standort wird nur im Vordergrund abgerufen (<em>„Nur bei Nutzung der App"</em>)</li>
+    <li>Kein Hintergrund-Tracking, keine dauerhafte Standortspeicherung</li>
+    <li>Koordinaten werden gerundet (2 Dezimalstellen) an Ticketmaster &amp; Bandsintown übertragen</li>
+    <li>Widerruf jederzeit: <strong>iOS Einstellungen → Datenschutz → Ortungsdienste → GiGNear</strong></li>
+  </ul>
+
+  <h1>5. Werbung (Google AdMob)</h1>
+  <ul>
+    <li>Die kostenlose Version zeigt Werbung via Google AdMob</li>
+    <li>Beim ersten App-Start erscheint der <strong>App Tracking Transparency (ATT)</strong> Dialog</li>
+    <li>Lehnst du Tracking ab → nicht-personalisierte Werbung</li>
+    <li>Discover Pro Abonnenten sehen <strong>keine Werbung</strong> im Discover-Bereich</li>
+  </ul>
+  <p>Mehr: <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></p>
+
+  <h1>6. In-App-Käufe (Discover Pro)</h1>
+  <ul>
+    <li>Zahlungsabwicklung ausschließlich durch Apple – wir erhalten keine Zahlungsdaten</li>
+    <li>Kündigung jederzeit: <strong>iOS Einstellungen → Apple ID → Abonnements</strong></li>
+  </ul>
+
+  <h1>7. Push-Benachrichtigungen</h1>
+  <ul>
+    <li>Zustellung über Apple Push Notification Service (APNs) – verschlüsselt</li>
+    <li>Deaktivierung: <strong>iOS Einstellungen → Mitteilungen → GiGNear</strong></li>
+    <li>Discover Pro: zusätzliche Benachrichtigungen für empfohlene Artists</li>
+  </ul>
+
+  <h1>8. Deine Rechte (DSGVO)</h1>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Recht</th><th>Bedeutung</th><th>Kontakt</th></tr></thead>
+    <tbody>
+      <tr><td>Auskunft (Art. 15)</td><td>Welche Daten wir verarbeiten</td><td><a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></td></tr>
+      <tr><td>Berichtigung (Art. 16)</td><td>Fehlerhafte Daten korrigieren</td><td><a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></td></tr>
+      <tr><td>Löschung (Art. 17)</td><td>Alle Daten löschen lassen</td><td>App deinstallieren + E-Mail</td></tr>
+      <tr><td>Widerspruch (Art. 21)</td><td>Verarbeitung widersprechen</td><td><a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></td></tr>
+      <tr><td>Beschwerde</td><td>Bei Datenschutzbehörde</td><td><a href="https://dsb.gv.at" target="_blank">dsb.gv.at</a> (Österreich)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h1>9. Datensicherheit</h1>
+  <ul>
+    <li>OAuth Tokens im verschlüsselten iOS Keychain</li>
+    <li>Alle API-Kommunikation über HTTPS / TLS 1.3</li>
+    <li>Keine Nutzerdatenbank – keine Konten, keine Passwörter</li>
+  </ul>
+
+  <h1>10. Drittanbieter</h1>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Anbieter</th><th>Zweck</th><th>Datenschutz</th><th>Sitz</th></tr></thead>
+    <tbody>
+      <tr><td>Ticketmaster</td><td>Event-Daten</td><td><a href="https://www.ticketmaster.com/h/privacy.html" target="_blank">ticketmaster.com/privacy</a></td><td>USA</td></tr>
+      <tr><td>Bandsintown</td><td>Event-Daten</td><td><a href="https://bandsintown.com/privacy" target="_blank">bandsintown.com/privacy</a></td><td>USA</td></tr>
+      <tr><td>Google AdMob</td><td>Werbung</td><td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td><td>USA</td></tr>
+      <tr><td>Apple APNs</td><td>Push-Nachrichten</td><td><a href="https://apple.com/de/privacy" target="_blank">apple.com/de/privacy</a></td><td>USA</td></tr>
+      <tr><td>Railway</td><td>Backend-Hosting</td><td><a href="https://railway.app/legal/privacy" target="_blank">railway.app/legal/privacy</a></td><td>USA</td></tr>
+    </tbody>
+  </table></div>
+  <p>Alle US-Anbieter sind nach dem EU-US Data Privacy Framework zertifiziert oder nutzen EU-Standardvertragsklauseln.</p>
+
+  <h1>11. Kinder</h1>
+  <p>GiGNear ist nicht für Kinder unter 13 Jahren bestimmt. Bei Verdacht: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></p>
+
+  <h1>12. Änderungen</h1>
+  <p>Wesentliche Änderungen werden per Push-Mitteilung oder beim App-Start angezeigt.</p>
+
+  <h1>13. Kontakt</h1>
+  <p><strong>E-Mail:</strong> <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a><br>
+  <strong>Stand:</strong> Juni 2026 · Version 1.0</p>
+
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     ENGLISH
+════════════════════════════════════════════════════════════ -->
+<section class="lang-section" id="lang-en">
+  <div class="hero">
+    <div class="hero-icon">🔒</div>
+    <h1>Privacy Policy</h1>
+    <p>GiGNear only reads artist names – no music library, no listening history, no personal data.</p>
+    <div class="meta">Version 1.0 · June 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
+  </div>
+
+  <h1>1. Data Controller</h1>
+  <p>The data controller is <strong>GiGNear</strong>. Contact: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></p>
+
+  <h1>2. Data We Process</h1>
+  <div class="tip green">✅ GiGNear does NOT access your music library, listening history, messages, or contacts.</div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Category</th><th>Source</th><th>Purpose</th><th>Storage</th><th>Shared With</th></tr></thead>
+    <tbody>
+      <tr><td>Artist names</td><td>Connected music services</td><td>Event search</td><td>RAM only, not persisted</td><td>Ticketmaster, Bandsintown</td></tr>
+      <tr><td>GPS location</td><td>iOS CoreLocation</td><td>Find nearby events</td><td>Not stored</td><td>Rounded coords to event APIs</td></tr>
+      <tr><td>OAuth access tokens</td><td>Music services</td><td>Playlist access</td><td>iOS Keychain (encrypted)</td><td>Respective service only</td></tr>
+      <tr><td>Device ID (IDFA)</td><td>iOS</td><td>Advertising (opt-in)</td><td>Google servers</td><td>Google AdMob (with consent only)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h1>3. Music Services (OAuth)</h1>
+  <p>You can connect the following services. All connections are voluntary and revocable at any time. We only read <strong>artist names</strong>.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Service</th><th>Data Read</th><th>Provider Privacy Policy</th></tr></thead>
+    <tbody>
+      <tr><td>Spotify</td><td>Playlist names, artist names</td><td><a href="https://spotify.com/privacy" target="_blank">spotify.com/privacy</a></td></tr>
+      <tr><td>Apple Music</td><td>Playlist names, artist names</td><td><a href="https://apple.com/privacy" target="_blank">apple.com/privacy</a></td></tr>
+      <tr><td>YouTube Music</td><td>Playlist names, artist names</td><td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td></tr>
+      <tr><td>SoundCloud</td><td>Set names, artist names</td><td><a href="https://soundcloud.com/pages/privacy" target="_blank">soundcloud.com/pages/privacy</a></td></tr>
+      <tr><td>Qobuz</td><td>Playlist names, artist names</td><td><a href="https://www.qobuz.com/info/legal/privacy-policy" target="_blank">qobuz.com/…/privacy-policy</a></td></tr>
+      <tr><td>Deezer</td><td>Playlist names, artist names</td><td><a href="https://www.deezer.com/legal/privacy" target="_blank">deezer.com/legal/privacy</a></td></tr>
+      <tr><td>Tidal</td><td>Playlist names, artist names</td><td><a href="https://tidal.com/privacy" target="_blank">tidal.com/privacy</a></td></tr>
+      <tr><td>Amazon Music</td><td colspan="2">Not available – no public API</td></tr>
+    </tbody>
+  </table></div>
+
+  <h1>4. Location Data</h1>
+  <ul>
+    <li>Location accessed only while app is in use ("When In Use" permission)</li>
+    <li>No background tracking, no persistent location storage</li>
+    <li>Rounded coordinates sent to Ticketmaster &amp; Bandsintown</li>
+    <li>Revoke anytime: <strong>iOS Settings → Privacy → Location Services → GiGNear</strong></li>
+  </ul>
+
+  <h1>5. Advertising (Google AdMob)</h1>
+  <ul>
+    <li>Free version displays ads via Google AdMob</li>
+    <li>App Tracking Transparency (ATT) prompt shown on first launch</li>
+    <li>If you decline tracking → non-personalized ads</li>
+    <li>Discover Pro subscribers see <strong>no ads</strong> in Discover mode</li>
+  </ul>
+
+  <h1>6. In-App Purchases (Discover Pro)</h1>
+  <ul>
+    <li>Payments processed exclusively by Apple – we receive no payment data</li>
+    <li>Cancel anytime: <strong>iOS Settings → Apple ID → Subscriptions</strong></li>
+  </ul>
+
+  <h1>7. Push Notifications</h1>
+  <ul>
+    <li>Delivered via Apple Push Notification Service (APNs) – end-to-end encrypted</li>
+    <li>Disable anytime: <strong>iOS Settings → Notifications → GiGNear</strong></li>
+    <li>Discover Pro: additional notifications for recommended artists</li>
+  </ul>
+
+  <h1>8. Your Rights (GDPR)</h1>
+  <p>You have the right to access, rectify, erase, restrict, and port your data, and to object to processing. Contact: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a>. You may also lodge a complaint with your local supervisory authority.</p>
+
+  <h1>9. Data Security</h1>
+  <ul>
+    <li>OAuth tokens in encrypted iOS Keychain</li>
+    <li>All API calls over HTTPS / TLS 1.3</li>
+    <li>No user database – no accounts, no passwords</li>
+  </ul>
+
+  <h1>10. Children</h1>
+  <p>GiGNear is not directed at children under 13. Contact <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a> if you believe a child has used the app.</p>
+
+  <h1>11. Changes</h1>
+  <p>Material changes will be notified via push notification or in-app prompt.</p>
+
+  <h1>12. Contact</h1>
+  <p><strong>Email:</strong> <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a><br>
+  <strong>Last updated:</strong> June 2026 · Version 1.0</p>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     FRANÇAIS
+════════════════════════════════════════════════════════════ -->
+<section class="lang-section" id="lang-fr">
+  <div class="hero">
+    <div class="hero-icon">🔒</div>
+    <h1>Politique de confidentialité</h1>
+    <p>GiGNear ne lit que les noms d'artistes – pas de bibliothèque musicale, pas d'historique, pas de données personnelles.</p>
+    <div class="meta">Version 1.0 · Juin 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
+  </div>
+
+  <h1>1. Responsable du traitement</h1>
+  <p>Le responsable est <strong>GiGNear</strong>. Contact : <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></p>
+
+  <h1>2. Données traitées</h1>
+  <div class="tip green">✅ GiGNear ne lit pas votre bibliothèque musicale, votre historique d'écoute, vos messages ni vos contacts.</div>
+  <ul>
+    <li><strong>Noms d'artistes</strong> depuis vos playlists (RAM uniquement, non conservés)</li>
+    <li><strong>Localisation GPS</strong> approximative (non stockée, transmise arrondie)</li>
+    <li><strong>Tokens OAuth</strong> dans le Keychain iOS chiffré</li>
+    <li><strong>Identifiant publicitaire (IDFA)</strong> via Google AdMob (avec consentement uniquement)</li>
+  </ul>
+
+  <h1>3. Services musicaux (OAuth)</h1>
+  <p>Vous pouvez connecter : Spotify, Apple Music, YouTube Music, SoundCloud, Qobuz, Deezer, Tidal. Nous lisons uniquement les <strong>noms d'artistes</strong>. La connexion est facultative et révocable à tout moment.</p>
+
+  <h1>4. Localisation</h1>
+  <ul>
+    <li>Accès uniquement en premier plan (<em>« Lors de l'utilisation »</em>)</li>
+    <li>Aucun suivi en arrière-plan</li>
+    <li>Coordonnées arrondies transmises à Ticketmaster / Bandsintown</li>
+    <li>Révoquez dans : <strong>Réglages iOS → Confidentialité → Service de localisation → GiGNear</strong></li>
+  </ul>
+
+  <h1>5. Publicité (Google AdMob)</h1>
+  <ul>
+    <li>La version gratuite affiche des publicités via Google AdMob</li>
+    <li>Dialogue ATT affiché au premier lancement</li>
+    <li>En cas de refus : publicités non personnalisées</li>
+    <li>Les abonnés Discover Pro ne voient <strong>pas de publicités</strong> dans Discover</li>
+  </ul>
+
+  <h1>6. Achats intégrés (Discover Pro)</h1>
+  <ul>
+    <li>Paiements traités exclusivement par Apple</li>
+    <li>Résiliation : <strong>Réglages iOS → Identifiant Apple → Abonnements</strong></li>
+  </ul>
+
+  <h1>7. Vos droits (RGPD)</h1>
+  <p>Accès, rectification, effacement, portabilité, opposition. Contactez : <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a>. Réclamation auprès de la CNIL (France) ou de votre autorité locale.</p>
+
+  <h1>8. Contact</h1>
+  <p><strong>E-mail :</strong> <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a><br>
+  <strong>Dernière mise à jour :</strong> Juin 2026 · Version 1.0</p>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     ESPAÑOL
+════════════════════════════════════════════════════════════ -->
+<section class="lang-section" id="lang-es">
+  <div class="hero">
+    <div class="hero-icon">🔒</div>
+    <h1>Política de privacidad</h1>
+    <p>GiGNear solo lee nombres de artistas – sin biblioteca musical, sin historial, sin datos personales.</p>
+    <div class="meta">Versión 1.0 · Junio 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
+  </div>
+
+  <h1>1. Responsable del tratamiento</h1>
+  <p>El responsable es <strong>GiGNear</strong>. Contacto: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></p>
+
+  <h1>2. Datos que tratamos</h1>
+  <div class="tip green">✅ GiGNear NO accede a tu biblioteca musical, historial de escucha, mensajes ni contactos.</div>
+  <ul>
+    <li><strong>Nombres de artistas</strong> de tus playlists (solo en RAM, no persistidos)</li>
+    <li><strong>Ubicación GPS</strong> aproximada (no almacenada, transmitida redondeada)</li>
+    <li><strong>Tokens OAuth</strong> en el Keychain iOS cifrado</li>
+    <li><strong>Identificador publicitario (IDFA)</strong> via Google AdMob (solo con consentimiento)</li>
+  </ul>
+
+  <h1>3. Servicios de música (OAuth)</h1>
+  <p>Puedes conectar: Spotify, Apple Music, YouTube Music, SoundCloud, Qobuz, Deezer, Tidal. Solo leemos <strong>nombres de artistas</strong>. La conexión es voluntaria y revocable en cualquier momento.</p>
+
+  <h1>4. Ubicación</h1>
+  <ul>
+    <li>Acceso solo en primer plano (<em>«Solo al usar la app»</em>)</li>
+    <li>Sin seguimiento en segundo plano</li>
+    <li>Coordenadas redondeadas enviadas a Ticketmaster / Bandsintown</li>
+    <li>Revoca en: <strong>Ajustes iOS → Privacidad → Localización → GiGNear</strong></li>
+  </ul>
+
+  <h1>5. Publicidad (Google AdMob)</h1>
+  <ul>
+    <li>La versión gratuita muestra anuncios via Google AdMob</li>
+    <li>Diálogo ATT mostrado en el primer inicio</li>
+    <li>Si rechazas: anuncios no personalizados</li>
+    <li>Los suscriptores de Discover Pro <strong>no ven anuncios</strong> en Discover</li>
+  </ul>
+
+  <h1>6. Compras integradas (Discover Pro)</h1>
+  <ul>
+    <li>Pagos procesados exclusivamente por Apple</li>
+    <li>Cancelar en: <strong>Ajustes iOS → ID de Apple → Suscripciones</strong></li>
+  </ul>
+
+  <h1>7. Tus derechos (RGPD)</h1>
+  <p>Acceso, rectificación, supresión, portabilidad, oposición. Contacta: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a>. Reclamación ante la AEPD (España) o tu autoridad local.</p>
+
+  <h1>8. Contacto</h1>
+  <p><strong>Email:</strong> <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a><br>
+  <strong>Última actualización:</strong> Junio 2026 · Versión 1.0</p>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     ITALIANO
+════════════════════════════════════════════════════════════ -->
+<section class="lang-section" id="lang-it">
+  <div class="hero">
+    <div class="hero-icon">🔒</div>
+    <h1>Informativa sulla privacy</h1>
+    <p>GiGNear legge solo nomi di artisti – nessuna libreria musicale, nessuna cronologia, nessun dato personale.</p>
+    <div class="meta">Versione 1.0 · Giugno 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
+  </div>
+
+  <h1>1. Titolare del trattamento</h1>
+  <p>Il titolare è <strong>GiGNear</strong>. Contatto: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></p>
+
+  <h1>2. Dati trattati</h1>
+  <div class="tip green">✅ GiGNear NON accede alla tua libreria musicale, cronologia di ascolto, messaggi o contatti.</div>
+  <ul>
+    <li><strong>Nomi degli artisti</strong> dalle tue playlist (solo in RAM, non persistiti)</li>
+    <li><strong>Posizione GPS</strong> approssimativa (non memorizzata, trasmessa arrotondata)</li>
+    <li><strong>Token OAuth</strong> nel Keychain iOS cifrato</li>
+    <li><strong>Identificatore pubblicitario (IDFA)</strong> tramite Google AdMob (solo con consenso)</li>
+  </ul>
+
+  <h1>3. Servizi musicali (OAuth)</h1>
+  <p>Puoi connettere: Spotify, Apple Music, YouTube Music, SoundCloud, Qobuz, Deezer, Tidal. Leggiamo solo i <strong>nomi degli artisti</strong>. La connessione è facoltativa e revocabile in qualsiasi momento.</p>
+
+  <h1>4. Dati di localizzazione</h1>
+  <ul>
+    <li>Accesso solo in primo piano (<em>«Solo durante l'utilizzo»</em>)</li>
+    <li>Nessun tracciamento in background</li>
+    <li>Coordinate arrotondate inviate a Ticketmaster / Bandsintown</li>
+    <li>Revoca in: <strong>Impostazioni iOS → Privacy → Localizzazione → GiGNear</strong></li>
+  </ul>
+
+  <h1>5. Pubblicità (Google AdMob)</h1>
+  <ul>
+    <li>La versione gratuita mostra annunci tramite Google AdMob</li>
+    <li>Dialogo ATT mostrato al primo avvio</li>
+    <li>In caso di rifiuto: annunci non personalizzati</li>
+    <li>Gli abbonati Discover Pro <strong>non vedono annunci</strong> in Discover</li>
+  </ul>
+
+  <h1>6. Acquisti in-app (Discover Pro)</h1>
+  <ul>
+    <li>Pagamenti elaborati esclusivamente da Apple</li>
+    <li>Disdetta in: <strong>Impostazioni iOS → ID Apple → Abbonamenti</strong></li>
+  </ul>
+
+  <h1>7. I tuoi diritti (GDPR)</h1>
+  <p>Accesso, rettifica, cancellazione, portabilità, opposizione. Contatta: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a>. Reclamo al Garante per la protezione dei dati personali (Italia) o all'autorità locale.</p>
+
+  <h1>8. Contatti</h1>
+  <p><strong>Email:</strong> <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a><br>
+  <strong>Ultimo aggiornamento:</strong> Giugno 2026 · Versione 1.0</p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 GiGNear &nbsp;·&nbsp;
+     <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a> &nbsp;·&nbsp;
+     <a href="#lang-de" onclick="switchLang('de')">DE</a> ·
+     <a href="#lang-en" onclick="switchLang('en')">EN</a> ·
+     <a href="#lang-fr" onclick="switchLang('fr')">FR</a> ·
+     <a href="#lang-es" onclick="switchLang('es')">ES</a> ·
+     <a href="#lang-it" onclick="switchLang('it')">IT</a>
+  </p>
+</footer>
+
+<script>
+  function switchLang(code) {
+    // Hide all
+    document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('visible'));
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    // Show selected
+    document.getElementById('lang-' + code).classList.add('visible');
+    document.querySelector('[onclick="switchLang(\'' + code + '\')"]').classList.add('active');
+    // Update html lang attribute
+    document.documentElement.lang = code;
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Auto-detect browser language on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const supported = ['de','en','fr','es','it'];
+    const browserLang = (navigator.language || 'de').slice(0, 2).toLowerCase();
+    if (supported.includes(browserLang)) switchLang(browserLang);
+  });
+</script>
+
+</body>
+</html>

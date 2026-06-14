@@ -250,7 +250,7 @@
     <div class="hero-icon">🔒</div>
     <h1>Datenschutzerklärung</h1>
     <p>GiGNear liest nur Artist-Namen – keine Musikbibliothek, kein Hörverlauf, keine persönlichen Daten.</p>
-    <div class="meta">Version 1.0 · Juni 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
+    <div class="meta">Version 1.1 · Juni 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
   </div>
 
   <h1>1. Verantwortlicher</h1>
@@ -265,8 +265,8 @@
       <th>Datenkategorie</th><th>Quelle</th><th>Zweck</th><th>Speicherung</th><th>Weitergabe</th>
     </tr></thead>
     <tbody>
-      <tr><td>Artist-Namen</td><td>Verbundene Musik-Dienste</td><td>Event-Suche</td><td>Nur RAM, nicht persistiert</td><td>Ticketmaster, Bandsintown</td></tr>
-      <tr><td>GPS-Standort</td><td>iOS CoreLocation</td><td>Events in der Nähe</td><td>Nicht gespeichert</td><td>Koordinaten (gerundet) an Event-APIs</td></tr>
+      <tr><td>Artist-Namen</td><td>Verbundene Musik-Dienste</td><td>Event-Suche</td><td>Nur RAM, nicht persistiert</td><td>Ticketmaster, Bandsintown, Oeticket</td></tr>
+      <tr><td>GPS-Standort</td><td>iOS CoreLocation</td><td>Events in der Nähe</td><td>Nicht gespeichert</td><td>Koordinaten (gerundet) an Event-APIs (Ticketmaster, Bandsintown, Oeticket)</td></tr>
       <tr><td>OAuth Access Token</td><td>Musik-Dienste</td><td>Playlist-Zugriff</td><td>iOS Keychain (verschlüsselt)</td><td>Nur an jeweiligen Dienst</td></tr>
       <tr><td>Gerätekennungen (IDFA)</td><td>iOS</td><td>Werbung (optional)</td><td>Google-Server</td><td>Google AdMob (nur mit Einwilligung)</td></tr>
     </tbody>
@@ -306,20 +306,38 @@
   </ul>
   <p>Mehr: <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></p>
 
-  <h1>6. In-App-Käufe (Discover Pro)</h1>
+  <h1>6. Externe Ticket-Links</h1>
+  <p>GiGNear verkauft selbst keine Tickets. Für Events können Links zu externen Ticketanbietern angezeigt werden:</p>
+  <ul>
+    <li><strong>Ticketmaster</strong>, <strong>Bandsintown</strong> und <strong>Oeticket</strong> liefern Event-Daten direkt über ihre APIs</li>
+    <li><strong>Eventim</strong> und <strong>mticket.eu</strong> werden als externe Such-Links (Affiliate-Links) angezeigt</li>
+    <li>Beim Antippen eines Ticket-Links verlässt du GiGNear und landest auf der Website des jeweiligen Anbieters</li>
+    <li>GiGNear übermittelt dabei <strong>keine</strong> persönlichen Daten an diese Anbieter – es wird lediglich eine externe URL geöffnet</li>
+    <li>Für Käufe auf diesen Plattformen gilt deren jeweilige Datenschutzerklärung</li>
+  </ul>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Anbieter</th><th>Funktion</th><th>Datenschutz</th></tr></thead>
+    <tbody>
+      <tr><td>Eventim</td><td>Externer Such-Link (Affiliate)</td><td><a href="https://www.eventim.de/datenschutz.html" target="_blank">eventim.de/datenschutz</a></td></tr>
+      <tr><td>mticket.eu</td><td>Externer Such-Link</td><td><a href="https://www.mticket.eu" target="_blank">mticket.eu</a></td></tr>
+      <tr><td>Oeticket</td><td>Event-Daten via Ticketmaster API (AT)</td><td><a href="https://www.oeticket.com/de/footer/privacy.html" target="_blank">oeticket.com/privacy</a></td></tr>
+    </tbody>
+  </table></div>
+
+  <h1>7. In-App-Käufe (Discover Pro)</h1>
   <ul>
     <li>Zahlungsabwicklung ausschließlich durch Apple – wir erhalten keine Zahlungsdaten</li>
     <li>Kündigung jederzeit: <strong>iOS Einstellungen → Apple ID → Abonnements</strong></li>
   </ul>
 
-  <h1>7. Push-Benachrichtigungen</h1>
+  <h1>8. Push-Benachrichtigungen</h1>
   <ul>
     <li>Zustellung über Apple Push Notification Service (APNs) – verschlüsselt</li>
     <li>Deaktivierung: <strong>iOS Einstellungen → Mitteilungen → GiGNear</strong></li>
     <li>Discover Pro: zusätzliche Benachrichtigungen für empfohlene Artists</li>
   </ul>
 
-  <h1>8. Deine Rechte (DSGVO)</h1>
+  <h1>9. Deine Rechte (DSGVO)</h1>
   <div class="table-wrap"><table>
     <thead><tr><th>Recht</th><th>Bedeutung</th><th>Kontakt</th></tr></thead>
     <tbody>
@@ -331,19 +349,20 @@
     </tbody>
   </table></div>
 
-  <h1>9. Datensicherheit</h1>
+  <h1>10. Datensicherheit</h1>
   <ul>
     <li>OAuth Tokens im verschlüsselten iOS Keychain</li>
     <li>Alle API-Kommunikation über HTTPS / TLS 1.3</li>
     <li>Keine Nutzerdatenbank – keine Konten, keine Passwörter</li>
   </ul>
 
-  <h1>10. Drittanbieter</h1>
+  <h1>11. Drittanbieter</h1>
   <div class="table-wrap"><table>
     <thead><tr><th>Anbieter</th><th>Zweck</th><th>Datenschutz</th><th>Sitz</th></tr></thead>
     <tbody>
       <tr><td>Ticketmaster</td><td>Event-Daten</td><td><a href="https://www.ticketmaster.com/h/privacy.html" target="_blank">ticketmaster.com/privacy</a></td><td>USA</td></tr>
       <tr><td>Bandsintown</td><td>Event-Daten</td><td><a href="https://bandsintown.com/privacy" target="_blank">bandsintown.com/privacy</a></td><td>USA</td></tr>
+      <tr><td>Oeticket (CTS Eventim)</td><td>Event-Daten (Österreich)</td><td><a href="https://www.oeticket.com/de/footer/privacy.html" target="_blank">oeticket.com/privacy</a></td><td>Österreich</td></tr>
       <tr><td>Google AdMob</td><td>Werbung</td><td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td><td>USA</td></tr>
       <tr><td>Apple APNs</td><td>Push-Nachrichten</td><td><a href="https://apple.com/de/privacy" target="_blank">apple.com/de/privacy</a></td><td>USA</td></tr>
       <tr><td>Railway</td><td>Backend-Hosting</td><td><a href="https://railway.app/legal/privacy" target="_blank">railway.app/legal/privacy</a></td><td>USA</td></tr>
@@ -351,15 +370,15 @@
   </table></div>
   <p>Alle US-Anbieter sind nach dem EU-US Data Privacy Framework zertifiziert oder nutzen EU-Standardvertragsklauseln.</p>
 
-  <h1>11. Kinder</h1>
+  <h1>12. Kinder</h1>
   <p>GiGNear ist nicht für Kinder unter 13 Jahren bestimmt. Bei Verdacht: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></p>
 
-  <h1>12. Änderungen</h1>
+  <h1>13. Änderungen</h1>
   <p>Wesentliche Änderungen werden per Push-Mitteilung oder beim App-Start angezeigt.</p>
 
-  <h1>13. Kontakt</h1>
+  <h1>14. Kontakt</h1>
   <p><strong>E-Mail:</strong> <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a><br>
-  <strong>Stand:</strong> Juni 2026 · Version 1.0</p>
+  <strong>Stand:</strong> Juni 2026 · Version 1.1</p>
 
 </section>
 
@@ -372,7 +391,7 @@
     <div class="hero-icon">🔒</div>
     <h1>Privacy Policy</h1>
     <p>GiGNear only reads artist names – no music library, no listening history, no personal data.</p>
-    <div class="meta">Version 1.0 · June 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
+    <div class="meta">Version 1.1 · June 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
   </div>
 
   <h1>1. Data Controller</h1>
@@ -383,8 +402,8 @@
   <div class="table-wrap"><table>
     <thead><tr><th>Category</th><th>Source</th><th>Purpose</th><th>Storage</th><th>Shared With</th></tr></thead>
     <tbody>
-      <tr><td>Artist names</td><td>Connected music services</td><td>Event search</td><td>RAM only, not persisted</td><td>Ticketmaster, Bandsintown</td></tr>
-      <tr><td>GPS location</td><td>iOS CoreLocation</td><td>Find nearby events</td><td>Not stored</td><td>Rounded coords to event APIs</td></tr>
+      <tr><td>Artist names</td><td>Connected music services</td><td>Event search</td><td>RAM only, not persisted</td><td>Ticketmaster, Bandsintown, Oeticket</td></tr>
+      <tr><td>GPS location</td><td>iOS CoreLocation</td><td>Find nearby events</td><td>Not stored</td><td>Rounded coords to event APIs (Ticketmaster, Bandsintown, Oeticket)</td></tr>
       <tr><td>OAuth access tokens</td><td>Music services</td><td>Playlist access</td><td>iOS Keychain (encrypted)</td><td>Respective service only</td></tr>
       <tr><td>Device ID (IDFA)</td><td>iOS</td><td>Advertising (opt-in)</td><td>Google servers</td><td>Google AdMob (with consent only)</td></tr>
     </tbody>
@@ -422,38 +441,69 @@
     <li>Discover Pro subscribers see <strong>no ads</strong> in Discover mode</li>
   </ul>
 
-  <h1>6. In-App Purchases (Discover Pro)</h1>
+  <h1>6. External Ticket Links</h1>
+  <p>GiGNear does not sell tickets itself. Links to external ticket providers may be shown for events:</p>
+  <ul>
+    <li><strong>Ticketmaster</strong>, <strong>Bandsintown</strong> and <strong>Oeticket</strong> provide event data directly via their APIs</li>
+    <li><strong>Eventim</strong> and <strong>mticket.eu</strong> are shown as external search links (affiliate links)</li>
+    <li>Tapping a ticket link takes you to the provider's website outside GiGNear</li>
+    <li>GiGNear transmits <strong>no</strong> personal data to these providers – it only opens an external URL</li>
+    <li>Purchases on these platforms are subject to their respective privacy policies</li>
+  </ul>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Provider</th><th>Function</th><th>Privacy Policy</th></tr></thead>
+    <tbody>
+      <tr><td>Eventim</td><td>External search link (affiliate)</td><td><a href="https://www.eventim.de/datenschutz.html" target="_blank">eventim.de/datenschutz</a></td></tr>
+      <tr><td>mticket.eu</td><td>External search link</td><td><a href="https://www.mticket.eu" target="_blank">mticket.eu</a></td></tr>
+      <tr><td>Oeticket</td><td>Event data via Ticketmaster API (AT)</td><td><a href="https://www.oeticket.com/de/footer/privacy.html" target="_blank">oeticket.com/privacy</a></td></tr>
+    </tbody>
+  </table></div>
+
+  <h1>7. In-App Purchases (Discover Pro)</h1>
   <ul>
     <li>Payments processed exclusively by Apple – we receive no payment data</li>
     <li>Cancel anytime: <strong>iOS Settings → Apple ID → Subscriptions</strong></li>
   </ul>
 
-  <h1>7. Push Notifications</h1>
+  <h1>8. Push Notifications</h1>
   <ul>
     <li>Delivered via Apple Push Notification Service (APNs) – end-to-end encrypted</li>
     <li>Disable anytime: <strong>iOS Settings → Notifications → GiGNear</strong></li>
     <li>Discover Pro: additional notifications for recommended artists</li>
   </ul>
 
-  <h1>8. Your Rights (GDPR)</h1>
+  <h1>9. Your Rights (GDPR)</h1>
   <p>You have the right to access, rectify, erase, restrict, and port your data, and to object to processing. Contact: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a>. You may also lodge a complaint with your local supervisory authority.</p>
 
-  <h1>9. Data Security</h1>
+  <h1>10. Data Security</h1>
   <ul>
     <li>OAuth tokens in encrypted iOS Keychain</li>
     <li>All API calls over HTTPS / TLS 1.3</li>
     <li>No user database – no accounts, no passwords</li>
   </ul>
 
-  <h1>10. Children</h1>
+  <h1>11. Third Parties</h1>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Provider</th><th>Purpose</th><th>Privacy Policy</th><th>Location</th></tr></thead>
+    <tbody>
+      <tr><td>Ticketmaster</td><td>Event data</td><td><a href="https://www.ticketmaster.com/h/privacy.html" target="_blank">ticketmaster.com/privacy</a></td><td>USA</td></tr>
+      <tr><td>Bandsintown</td><td>Event data</td><td><a href="https://bandsintown.com/privacy" target="_blank">bandsintown.com/privacy</a></td><td>USA</td></tr>
+      <tr><td>Oeticket (CTS Eventim)</td><td>Event data (Austria)</td><td><a href="https://www.oeticket.com/de/footer/privacy.html" target="_blank">oeticket.com/privacy</a></td><td>Austria</td></tr>
+      <tr><td>Google AdMob</td><td>Advertising</td><td><a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></td><td>USA</td></tr>
+      <tr><td>Apple APNs</td><td>Push notifications</td><td><a href="https://apple.com/privacy" target="_blank">apple.com/privacy</a></td><td>USA</td></tr>
+      <tr><td>Railway</td><td>Backend hosting</td><td><a href="https://railway.app/legal/privacy" target="_blank">railway.app/legal/privacy</a></td><td>USA</td></tr>
+    </tbody>
+  </table></div>
+
+  <h1>12. Children</h1>
   <p>GiGNear is not directed at children under 13. Contact <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a> if you believe a child has used the app.</p>
 
-  <h1>11. Changes</h1>
+  <h1>13. Changes</h1>
   <p>Material changes will be notified via push notification or in-app prompt.</p>
 
-  <h1>12. Contact</h1>
+  <h1>14. Contact</h1>
   <p><strong>Email:</strong> <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a><br>
-  <strong>Last updated:</strong> June 2026 · Version 1.0</p>
+  <strong>Last updated:</strong> June 2026 · Version 1.1</p>
 </section>
 
 
@@ -465,7 +515,7 @@
     <div class="hero-icon">🔒</div>
     <h1>Politique de confidentialité</h1>
     <p>GiGNear ne lit que les noms d'artistes – pas de bibliothèque musicale, pas d'historique, pas de données personnelles.</p>
-    <div class="meta">Version 1.0 · Juin 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
+    <div class="meta">Version 1.1 · Juin 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
   </div>
 
   <h1>1. Responsable du traitement</h1>
@@ -475,7 +525,7 @@
   <div class="tip green">✅ GiGNear ne lit pas votre bibliothèque musicale, votre historique d'écoute, vos messages ni vos contacts.</div>
   <ul>
     <li><strong>Noms d'artistes</strong> depuis vos playlists (RAM uniquement, non conservés)</li>
-    <li><strong>Localisation GPS</strong> approximative (non stockée, transmise arrondie)</li>
+    <li><strong>Localisation GPS</strong> approximative (non stockée, transmise arrondie à Ticketmaster, Bandsintown, Oeticket)</li>
     <li><strong>Tokens OAuth</strong> dans le Keychain iOS chiffré</li>
     <li><strong>Identifiant publicitaire (IDFA)</strong> via Google AdMob (avec consentement uniquement)</li>
   </ul>
@@ -487,7 +537,7 @@
   <ul>
     <li>Accès uniquement en premier plan (<em>« Lors de l'utilisation »</em>)</li>
     <li>Aucun suivi en arrière-plan</li>
-    <li>Coordonnées arrondies transmises à Ticketmaster / Bandsintown</li>
+    <li>Coordonnées arrondies transmises à Ticketmaster / Bandsintown / Oeticket</li>
     <li>Révoquez dans : <strong>Réglages iOS → Confidentialité → Service de localisation → GiGNear</strong></li>
   </ul>
 
@@ -499,18 +549,28 @@
     <li>Les abonnés Discover Pro ne voient <strong>pas de publicités</strong> dans Discover</li>
   </ul>
 
-  <h1>6. Achats intégrés (Discover Pro)</h1>
+  <h1>6. Liens de billetterie externes</h1>
+  <p>GiGNear ne vend pas de billets. Des liens vers des billetteries externes peuvent être affichés :</p>
+  <ul>
+    <li><strong>Ticketmaster</strong>, <strong>Bandsintown</strong> et <strong>Oeticket</strong> fournissent des données d'événements via leurs API</li>
+    <li><strong>Eventim</strong> et <strong>mticket.eu</strong> sont affichés comme liens de recherche externes (affiliation)</li>
+    <li>Appuyer sur un lien de billetterie ouvre le site du prestataire hors de GiGNear</li>
+    <li>GiGNear ne transmet <strong>aucune donnée personnelle</strong> à ces prestataires – seule une URL externe est ouverte</li>
+    <li>Les achats sur ces plateformes sont soumis à leur propre politique de confidentialité</li>
+  </ul>
+
+  <h1>7. Achats intégrés (Discover Pro)</h1>
   <ul>
     <li>Paiements traités exclusivement par Apple</li>
     <li>Résiliation : <strong>Réglages iOS → Identifiant Apple → Abonnements</strong></li>
   </ul>
 
-  <h1>7. Vos droits (RGPD)</h1>
+  <h1>8. Vos droits (RGPD)</h1>
   <p>Accès, rectification, effacement, portabilité, opposition. Contactez : <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a>. Réclamation auprès de la CNIL (France) ou de votre autorité locale.</p>
 
-  <h1>8. Contact</h1>
+  <h1>9. Contact</h1>
   <p><strong>E-mail :</strong> <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a><br>
-  <strong>Dernière mise à jour :</strong> Juin 2026 · Version 1.0</p>
+  <strong>Dernière mise à jour :</strong> Juin 2026 · Version 1.1</p>
 </section>
 
 
@@ -522,7 +582,7 @@
     <div class="hero-icon">🔒</div>
     <h1>Política de privacidad</h1>
     <p>GiGNear solo lee nombres de artistas – sin biblioteca musical, sin historial, sin datos personales.</p>
-    <div class="meta">Versión 1.0 · Junio 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
+    <div class="meta">Versión 1.1 · Junio 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
   </div>
 
   <h1>1. Responsable del tratamiento</h1>
@@ -532,7 +592,7 @@
   <div class="tip green">✅ GiGNear NO accede a tu biblioteca musical, historial de escucha, mensajes ni contactos.</div>
   <ul>
     <li><strong>Nombres de artistas</strong> de tus playlists (solo en RAM, no persistidos)</li>
-    <li><strong>Ubicación GPS</strong> aproximada (no almacenada, transmitida redondeada)</li>
+    <li><strong>Ubicación GPS</strong> aproximada (no almacenada, transmitida redondeada a Ticketmaster, Bandsintown, Oeticket)</li>
     <li><strong>Tokens OAuth</strong> en el Keychain iOS cifrado</li>
     <li><strong>Identificador publicitario (IDFA)</strong> via Google AdMob (solo con consentimiento)</li>
   </ul>
@@ -544,7 +604,7 @@
   <ul>
     <li>Acceso solo en primer plano (<em>«Solo al usar la app»</em>)</li>
     <li>Sin seguimiento en segundo plano</li>
-    <li>Coordenadas redondeadas enviadas a Ticketmaster / Bandsintown</li>
+    <li>Coordenadas redondeadas enviadas a Ticketmaster / Bandsintown / Oeticket</li>
     <li>Revoca en: <strong>Ajustes iOS → Privacidad → Localización → GiGNear</strong></li>
   </ul>
 
@@ -556,18 +616,28 @@
     <li>Los suscriptores de Discover Pro <strong>no ven anuncios</strong> en Discover</li>
   </ul>
 
-  <h1>6. Compras integradas (Discover Pro)</h1>
+  <h1>6. Enlaces externos de venta de entradas</h1>
+  <p>GiGNear no vende entradas. Pueden mostrarse enlaces a plataformas externas de venta de entradas:</p>
+  <ul>
+    <li><strong>Ticketmaster</strong>, <strong>Bandsintown</strong> y <strong>Oeticket</strong> proporcionan datos de eventos mediante sus API</li>
+    <li><strong>Eventim</strong> y <strong>mticket.eu</strong> se muestran como enlaces de búsqueda externos (afiliación)</li>
+    <li>Al pulsar un enlace de entradas se abre el sitio del proveedor fuera de GiGNear</li>
+    <li>GiGNear no transmite <strong>ningún dato personal</strong> a estos proveedores – solo se abre una URL externa</li>
+    <li>Las compras en estas plataformas se rigen por su propia política de privacidad</li>
+  </ul>
+
+  <h1>7. Compras integradas (Discover Pro)</h1>
   <ul>
     <li>Pagos procesados exclusivamente por Apple</li>
     <li>Cancelar en: <strong>Ajustes iOS → ID de Apple → Suscripciones</strong></li>
   </ul>
 
-  <h1>7. Tus derechos (RGPD)</h1>
+  <h1>8. Tus derechos (RGPD)</h1>
   <p>Acceso, rectificación, supresión, portabilidad, oposición. Contacta: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a>. Reclamación ante la AEPD (España) o tu autoridad local.</p>
 
-  <h1>8. Contacto</h1>
+  <h1>9. Contacto</h1>
   <p><strong>Email:</strong> <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a><br>
-  <strong>Última actualización:</strong> Junio 2026 · Versión 1.0</p>
+  <strong>Última actualización:</strong> Junio 2026 · Versión 1.1</p>
 </section>
 
 
@@ -579,7 +649,7 @@
     <div class="hero-icon">🔒</div>
     <h1>Informativa sulla privacy</h1>
     <p>GiGNear legge solo nomi di artisti – nessuna libreria musicale, nessuna cronologia, nessun dato personale.</p>
-    <div class="meta">Versione 1.0 · Giugno 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
+    <div class="meta">Versione 1.1 · Giugno 2026 · <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a></div>
   </div>
 
   <h1>1. Titolare del trattamento</h1>
@@ -589,7 +659,7 @@
   <div class="tip green">✅ GiGNear NON accede alla tua libreria musicale, cronologia di ascolto, messaggi o contatti.</div>
   <ul>
     <li><strong>Nomi degli artisti</strong> dalle tue playlist (solo in RAM, non persistiti)</li>
-    <li><strong>Posizione GPS</strong> approssimativa (non memorizzata, trasmessa arrotondata)</li>
+    <li><strong>Posizione GPS</strong> approssimativa (non memorizzata, trasmessa arrotondata a Ticketmaster, Bandsintown, Oeticket)</li>
     <li><strong>Token OAuth</strong> nel Keychain iOS cifrato</li>
     <li><strong>Identificatore pubblicitario (IDFA)</strong> tramite Google AdMob (solo con consenso)</li>
   </ul>
@@ -601,7 +671,7 @@
   <ul>
     <li>Accesso solo in primo piano (<em>«Solo durante l'utilizzo»</em>)</li>
     <li>Nessun tracciamento in background</li>
-    <li>Coordinate arrotondate inviate a Ticketmaster / Bandsintown</li>
+    <li>Coordinate arrotondate inviate a Ticketmaster / Bandsintown / Oeticket</li>
     <li>Revoca in: <strong>Impostazioni iOS → Privacy → Localizzazione → GiGNear</strong></li>
   </ul>
 
@@ -613,18 +683,28 @@
     <li>Gli abbonati Discover Pro <strong>non vedono annunci</strong> in Discover</li>
   </ul>
 
-  <h1>6. Acquisti in-app (Discover Pro)</h1>
+  <h1>6. Link esterni per i biglietti</h1>
+  <p>GiGNear non vende biglietti. Possono essere mostrati link a piattaforme esterne di biglietteria:</p>
+  <ul>
+    <li><strong>Ticketmaster</strong>, <strong>Bandsintown</strong> e <strong>Oeticket</strong> forniscono dati sugli eventi tramite le loro API</li>
+    <li><strong>Eventim</strong> e <strong>mticket.eu</strong> sono mostrati come link di ricerca esterni (affiliazione)</li>
+    <li>Toccando un link per i biglietti si apre il sito del fornitore fuori da GiGNear</li>
+    <li>GiGNear non trasmette <strong>alcun dato personale</strong> a questi fornitori – viene solo aperto un URL esterno</li>
+    <li>Gli acquisti su queste piattaforme sono soggetti alla rispettiva informativa sulla privacy</li>
+  </ul>
+
+  <h1>7. Acquisti in-app (Discover Pro)</h1>
   <ul>
     <li>Pagamenti elaborati esclusivamente da Apple</li>
     <li>Disdetta in: <strong>Impostazioni iOS → ID Apple → Abbonamenti</strong></li>
   </ul>
 
-  <h1>7. I tuoi diritti (GDPR)</h1>
+  <h1>8. I tuoi diritti (GDPR)</h1>
   <p>Accesso, rettifica, cancellazione, portabilità, opposizione. Contatta: <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a>. Reclamo al Garante per la protezione dei dati personali (Italia) o all'autorità locale.</p>
 
-  <h1>8. Contatti</h1>
+  <h1>9. Contatti</h1>
   <p><strong>Email:</strong> <a href="mailto:GIGNear@pm.me">GIGNear@pm.me</a><br>
-  <strong>Ultimo aggiornamento:</strong> Giugno 2026 · Versione 1.0</p>
+  <strong>Ultimo aggiornamento:</strong> Giugno 2026 · Versione 1.1</p>
 </section>
 
 </main>
